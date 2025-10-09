@@ -1,0 +1,58 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+#pymongo = "~=3.12"
+pymongo = "*"
+bcrypt = "*"
+python-dateutil = "*"
+gunicorn = "*"
+dnspython = "*"
+sentry-sdk = {extras = ["flask"], version = "*"}
+requests = "*"
+gevent = "*"
+boto3 = "==1.35.99"
+pyasn1 = "*"
+pyasn1-modules = "*"
+ldap3 = "*"
+pillow = "*"
+#gitpython = "*"
+flask-cors = "*"
+regex = "*"
+pandas = "*"
+pyjwt = "*"
+openpyxl = "*"
+numericalunits = "*"
+rq = "*"
+qrcode = {extras = ["pil"], version = "*"}
+numpy = "*"
+mongoengine = "*"
+flask-mongoengine = "*"
+blinker = "*"
+cachetools = "*"
+cryptography = "*"
+Werkzeug = "*"
+pyexcel = "*"
+pyexcel-xlsx = "*"
+pathvalidate = "*"
+furthrmind = "*"
+iteration-utilities = "*"
+flask-caching = "*"
+motor = "*"
+flask = {extras = ["async"], version = "*"}
+marshmallow = "==3.26.1"
+webargs = "*"
+apispec = {extras = ["marschmallow"], version = "*"}
+apispec-webframeworks = "*"
+
+[dev-packages]
+#pyinstaller = "*"
+pytest-flask = "*"
+#mongita = "*"
+#ipykernel = "*"
+#furthrmind = "*"
+
+[requires]
+python_version = "3"

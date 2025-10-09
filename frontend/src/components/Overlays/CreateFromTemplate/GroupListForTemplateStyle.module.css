@@ -1,0 +1,9 @@
+.templateList{
+    padding: 0px 10px;
+}
+
+@media(max-width:650px){
+   .templateList{
+    max-height: 400px;
+   }
+}

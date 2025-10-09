@@ -1,0 +1,29 @@
+# syntax=docker/dockerfile:1
+FROM python:3.12-slim-bookworm AS furthrmind-server
+
+RUN apt-get -y update
+RUN apt-get -y install ca-certificates
+
+WORKDIR /app
+
+COPY Pipfile ./
+RUN pip install pipenv
+RUN pipenv install
+RUN pipenv update
+
+COPY start.sh .
+COPY migrate.sh .
+COPY start_without_migrate.sh .
+COPY start_worker.sh .
+COPY start_worker.py .
+COPY start_trigger_server.sh .
+COPY start_trigger_server.py .
+COPY tenjin tenjin
+COPY config.py app.py start_worker.py ./
+COPY DemoDB ./DemoDB
+
+COPY docker/correct_line_ending_sh.py .
+
+RUN python correct_line_ending_sh.py
+
+CMD ["sh","start_worker.sh"]

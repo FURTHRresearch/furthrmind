@@ -1,0 +1,255 @@
+.parentWrapper {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  min-height: 100vh;
+}
+
+.rightPanelWrapper {
+  background-color: rgba(1, 100, 248, 1);
+  padding-left: 56px;
+  padding-top: 130px;
+}
+
+.subHeadingCss {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 62px;
+  color: #ffffff;
+}
+
+.headingText {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 62px;
+  line-height: 98px;
+  display: block;
+  color: #ffffff;
+}
+
+.loginVectorImage {
+  width: 445px;
+  height: 438px;
+}
+
+.loginVectorCss {
+  position: absolute;
+  right: 0px;
+  bottom: 20px;
+}
+
+.logoCss {
+  height: 66px;
+  width: 60px;
+}
+
+.leftPanelWrapper {
+  margin: 0px 30px;
+  min-width: 300px;
+}
+
+.leftPanelTextWrapper {
+  display: flex;
+  padding-top: 30%;
+  align-items: center;
+
+  flex-direction: column;
+  height: 100vh;
+}
+
+.welcomeCss {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 21px;
+  /* identical to box height, or 87% */
+
+  text-align: center;
+  letter-spacing: 0.1px;
+  margin-top: 40px;
+  color: #000000;
+}
+
+.loginWrapper {
+  max-width: 370px;
+}
+
+.footerActionButtonCss {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+@media (max-width: 1950px) {
+  .parentWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .rightPanelWrapper {
+    align-items: center;
+    display: flex;
+    padding-top: 0px;
+  }
+}
+
+/* @media (max-width: 1450px) {
+  .parentWrapper {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    min-height: 100vh;
+  }
+
+  .rightPanelWrapper {
+    background-color: rgba(1, 100, 248, 1);
+    padding-left: 56px;
+    padding-top: 130px;
+    align-items: flex-start;
+  }
+
+  .subHeadingCss {
+    font-family: "PT Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 62px;
+    color: #ffffff;
+  }
+
+  .headingText {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 62px;
+    line-height: 98px;
+    display: block;
+    color: #ffffff;
+  }
+
+  .loginVectorImage {
+    width: 445px;
+    height: 438px;
+  }
+
+  .loginVectorCss {
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+  }
+
+  .logoCss {
+    height: 66px;
+    width: 60px;
+  }
+
+  .leftPanelWrapper {
+    margin: 0px 30px;
+    min-width: 300px;
+  }
+
+  .leftPanelTextWrapper {
+    display: flex;
+    padding-top: 30%;
+    align-items: center;
+
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .welcomeCss {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    margin-top: 40px;
+    color: #000000;
+  }
+
+  .loginWrapper {
+    max-width: 370px;
+  }
+
+  .footerActionButtonCss {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+} */
+
+@media (max-width: 1220px) {
+  .headingText {
+    font-size: 54px;
+    line-height: 98px;
+  }
+  /* .loginVectorImage {
+    width: 380px;
+    height: 400px;
+  } */
+  .loginVectorCss {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+  }
+}
+
+@media (max-width: 1110px) {
+  .loginVectorCss {
+    display: none;
+  }
+  .rightPanelWrapper {
+    align-items: center;
+    padding-top: 0px;
+  }
+  .leftPanelTextWrapper {
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .headingText {
+    font-size: 48px;
+    line-height: 98px;
+  }
+  .subHeadingCss {
+    font-size: 24px;
+  }
+  .rightPanelWrapper {
+    padding-left: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .subHeadingCss {
+    font-size: 18px;
+  }
+  .headingText {
+    font-size: 36px;
+    line-height: 98px;
+  }
+}
+
+@media (max-width: 654px) {
+  .parentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rightPanelWrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 365px) {
+  .welcomeCss {
+    font-size: 18px;
+  }
+}

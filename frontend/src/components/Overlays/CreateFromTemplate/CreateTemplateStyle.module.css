@@ -1,0 +1,213 @@
+.boxWrapper {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  column-gap: 30px;
+  align-items: flex-start;
+}
+
+.modalWrapper {
+  position: absolute;
+  width: 80vw;
+  margin: 5% 10vw;
+  overflow: hidden;
+  background: #f5f5f7;
+  border-radius: 16px;
+  padding: 50px 50px;
+}
+
+.child1 {
+  max-height: calc(55vh + 40px);
+  overflow: auto;
+}
+
+.viewWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  max-height: 60vh;
+  overflow: auto;
+  padding: 10px;
+}
+
+.cardViewWrapper {
+  min-height: 200px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cardBody {
+  min-height: 130px;
+  padding: 17px;
+  box-sizing: border-box;
+  border-radius: 16px 16px 0px 0px;
+  mix-blend-mode: normal;
+}
+
+.footer {
+  margin-top: 90px;
+}
+
+.cardIdCss {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  max-width: 200px;
+  word-wrap: break-word;
+  color: #000000;
+  margin-top: 20px;
+}
+
+.cardIconCss {
+  background-color: rgba(0, 0, 0, 0.07);
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  margin-bottom: 15px;
+}
+
+.cardFooter {
+  /*display: flex;*/
+  justify-content: space-between;
+  align-items: center;
+  /*box-sizing: border-box;*/
+  padding: 11px 17px;
+}
+
+.cardTypeCss {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+  line-height: 19px;
+  letter-spacing: 0.294355px;
+
+  color: #000000;
+}
+
+.cardDateCss {
+  margin-top: 3px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+  line-height: 19px;
+  letter-spacing: 0.294355px;
+
+  color: #000000;
+}
+
+.cardSelectButtonCss {
+  padding: 9px 20px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+}
+
+.searchInput {
+  padding: 6px 45px;
+  background: #ffffff;
+
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  outline: none;
+  line-height: 28px;
+  border: none;
+  letter-spacing: 0.2px;
+  width: 90%;
+
+}
+
+.searchInput::placeholder {
+  color: #737373;
+}
+
+.searchIcon {
+  left: 30px;
+  top: 147px;
+  position: absolute;
+}
+
+.clearIcon {
+  right: 15px;
+  top: 10px;
+  position: absolute;
+  z-index: 15;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    max-height: 60vh;
+    overflow: auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .modalWrapper {
+    width: 95vw;
+    margin: 5% 20px;
+  }
+
+  .child2 {
+    overflow: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .cardWrapper {
+    grid-template-columns: 1fr;
+  }
+  .cardBody {
+    height: 180px;
+  }
+}
+
+@media (max-width: 776px) {
+  .cardBody {
+    height: 130px;
+  }
+}
+
+@media (max-width: 650px) {
+  .boxWrapper {
+    grid-template-columns: 1fr;
+    overflow: auto;
+  }
+  .cardBody {
+    height: 180px;
+  }
+}

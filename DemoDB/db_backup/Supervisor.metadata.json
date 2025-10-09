@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"SubUserID":{"$numberInt":"1"}},"name":"SubUserID_1","background":false},{"v":{"$numberInt":"2"},"key":{"TopUserID":{"$numberInt":"1"}},"name":"TopUserID_1","background":false}],"uuid":"053c60ebc84e4e90900ed3736a460fb9","collectionName":"Supervisor"}

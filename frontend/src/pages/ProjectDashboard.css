@@ -1,0 +1,17 @@
+#analytic_dashboard.e-dashboardlayout.e-control
+  .e-panel
+  .e-panel-container
+  .e-panel-header {
+  border-bottom: 2px solid black !important;
+  height: 65px;
+  padding: 15px;
+}
+
+.template {
+  width: 100%;
+  height: 100%;
+}
+
+#analytic_dashboard.e-dashboardlayout.e-control .e-panel.e-panel-transition {
+  transition: none;
+}

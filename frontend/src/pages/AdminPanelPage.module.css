@@ -1,0 +1,29 @@
+.pageStyle {
+  background-color: #f5f5f7;
+  min-height: 100vh;
+}
+
+.pageInnerWrapper {
+  margin: 0px 86px;
+}
+
+.titleText {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0.4px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.subTitleText {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: #6f7a7d;
+  max-width: 580px;
+}

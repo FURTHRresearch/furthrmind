@@ -1,0 +1,127 @@
+.headerWrap {
+  padding: 13px 96px 13px 96px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+}
+
+.logoTitle {
+  font-family: "Roboto";
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menuItem {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: #737373;
+}
+
+.menuItem:hover {
+  color: #737373;
+}
+
+.menuItemActive {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: #252b42;
+}
+
+.menuItem:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  color: #737373;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.menuItem:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.brandArea {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+
+.sideBarMenuIcon {
+  position: relative;
+  top: -2px;
+}
+
+.searchInput {
+  width: 500px;
+}
+
+.sideBarMenuIcon {
+  display: none;
+}
+
+.menuWrapper {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  column-gap: 28px;
+}
+@media (max-width: 576px) {
+  .headerWrap {
+    padding: 13px 30px 13px 30px;
+  }
+  .sideBarMenuIcon {
+    display: block;
+  }
+  .brandArea {
+    column-gap: 10px;
+  }
+  .menuWrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sideBarMenuIcon {
+    display: block;
+  }
+  .menuWrapper {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .headerWrap {
+    padding: 13px 20px 13px 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .headerWrap {
+    padding: 13px 46px 13px 46px;
+    grid-template-columns: 20% 30% 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .headerWrap {
+    padding: 13px 26px 13px 26px;
+    grid-template-columns: 20% 10% 70%;
+  }
+}

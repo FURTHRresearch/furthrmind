@@ -1,0 +1,37 @@
+.apiWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .boxWrapper {
+    padding-top: 30px;
+    border-top: 1px solid #C4C4C4;
+    min-height: 350px;
+  }
+  .boxWrapper2 {
+    border-top: 1px solid #C4C4C4;
+    min-height: 350px;
+  }
+  .apiTitle{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    color: #000000;
+  }
+  
+  .apiSubTitle{
+    font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height:25px;
+  
+  color: #6F7A7D;
+  max-width: 580px;
+  text-align: center;
+  }

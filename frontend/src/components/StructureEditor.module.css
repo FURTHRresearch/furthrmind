@@ -1,0 +1,4 @@
+.iframePlaceholder
+{
+   background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100% 100%"><text x="50%" y="50%" font-size="24" text-anchor="middle">Loading editor...</text></svg>') 0px 0px no-repeat;
+}

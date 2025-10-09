@@ -1,0 +1,58 @@
+.pageStyle {
+  background-color: #f5f5f7;
+  height: 100%;
+}
+
+.pageInnerWrapper {
+  margin: 0px 40px 0px 116px;
+}
+
+.headingWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.heading {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  /* identical to box height, or 107% */
+
+  letter-spacing: 0.1px;
+
+  color: #000000;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.subHeading {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  color: #c4c4c4;
+}
+
+.ellipsesIcon {
+  cursor: pointer;
+}

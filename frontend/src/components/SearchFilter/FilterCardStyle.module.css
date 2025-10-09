@@ -1,0 +1,54 @@
+.cardWrapper {
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid #000000;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.cardWrapper:hover {
+  border: 2px solid #ec8153;
+  cursor: pointer;
+}
+
+.keyCss {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #000000;
+  display: inline-block;
+}
+
+.valueCss {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.94);
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.iconCss {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.iconCss:hover {
+  font-size: 16px;
+  color: red !important;
+}
+
+.comboBoxWrapper {
+  display: flex;
+  overflow: auto;
+  column-gap: 10px;
+  max-width: 200px;
+}

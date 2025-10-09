@@ -1,0 +1,12 @@
+.git
+.venv
+.build
+.vscode
+.idea
+node_modules
+compilation
+instance
+dist
+*/node_modules
+*/dist
+.vscode/launch.json

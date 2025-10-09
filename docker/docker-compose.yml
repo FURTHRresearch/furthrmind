@@ -1,0 +1,99 @@
+# requires modification of /etc/hosts to make minio point to 127.0.0.1 on the host
+x-environment: &commonEnvironment
+  SECRET_KEY: 'change_this_secret_key'
+  MONGODB_URI: 'mongodb://mongodb:27017/furthrmind'
+  MONGODB_DB: furthrmind
+  DEFAULT_ADMIN: xx@example.com
+  ROOT_URL: https://furthrmind.example.com
+  CALLBACK_URL: https://furthrmind.example.com
+  GUNICORN_CMD_ARGS: -b 0.0.0.0:8080 -w 2
+  S3_KEY: "my_key"
+  S3_SECRET: "my_secret"
+  S3_ENDPOINT: "https://minio.example.com"
+  S3_BUCKET: "furthrmind"
+  S3_REGION: "fra1"
+  ALLOWED_SIGNUP_DOMAIN: example.com # restrict signup to a specific email domain, or leave empty to allow all domains
+  REDIS_QUEUE_ENABLED: "true"
+  REDIS_URL: redis://default:<redis_password>@redis:6379
+  REDIS_DB: furthrmind
+  WEBDATACALC_API: http://dockerrun:8088
+  WEBDATACALC_API_KEY: <webdatacalc_key>
+  PYTHONUNBUFFERED: 1
+  SPREADSHEET_CALCULATOR_URL: http://furthrmind-spreadsheet-calculator:5555
+  SPREADSHEET_CALCULATOR_ACCESS_KEY: <spreadsheet_calculator_key>
+  ONLY_OFFICE_DOC_SERVER: https://onlyoffice.example.com
+  ONLY_OFFICE_JWT_SECRET: <onlyoffice_jwt>
+
+services:
+  tenjin:
+    image: furthrresearch/furthrmind-server-v1
+    depends_on:
+      - db
+      - minio
+    restart: unless-stopped
+    environment: *commonEnvironment
+    ports:
+      - 127.0.0.1:8080:8080
+
+  furthrmind-worker:
+    image: furthrresearch/furthrmind-worker-v1:latest
+    restart: unless-stopped
+    environment: *commonEnvironment
+
+  db:
+    image: mongo:6.0
+    logging:
+      driver: "none"
+    restart: unless-stopped
+    environment:
+      MONGODB_DATA_DIR: /data/db
+    volumes:
+      - mongodb-data:/data/db
+    ports:
+      - 127.0.0.1:27017:27017
+  
+  redis:
+    image: redis:latest
+    restart: unless-stopped
+    command: redis-server --save 20 1 --loglevel warning --requirepass <redis_password>
+
+  minio:
+    image: minio/minio
+    restart: unless-stopped
+    entrypoint: sh
+    command: -c 'mkdir -p /export/furthrmind && /usr/bin/docker-entrypoint.sh minio server /export'
+    ports:
+      - 127.0.0.1:9000:9000
+    volumes:
+      - minio-data:/export
+    environment:
+      MINIO_ACCESS_KEY: "my_key"
+      MINIO_SECRET_KEY: "my_secret"
+      MINIO_REGION_NAME: 'local'
+
+  coderunner:
+    image: furthrresearch/coderunner
+
+  dockerrun:
+    image: glot/docker-run
+    restart: unless-stopped
+    ports:
+      - 127.0.0.1:8088:8088
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      API_ACCESS_TOKEN: <webdatacalc_key>
+      DOCKER_CONTAINER_NETWORK_DISABLED: 'false'
+
+  furthrmind-spreadsheet-calculator:
+    image: 'docker.io/furthrresearch/spreadsheet-calculator'
+    restart: unless-stopped
+    environment:
+      GUNICORN_CMD_ARGS: -b 0.0.0.0:5555 -w 2
+      SPREADSHEET_CALCULATOR_ACCESS_KEY: <spreadsheet_calculator_key>
+    ports:
+      - 127.0.0.1:8091:5555
+
+
+
+

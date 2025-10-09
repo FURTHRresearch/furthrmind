@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"ProjectID":{"$numberInt":"1"}},"name":"ProjectID_1","background":false},{"v":{"$numberInt":"2"},"key":{"Predefined":{"$numberInt":"1"}},"name":"Predefined_1","background":false}],"uuid":"fbdee4f0f86e4e20a478122e29337860","collectionName":"UnitCategory"}

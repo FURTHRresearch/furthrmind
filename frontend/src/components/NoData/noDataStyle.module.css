@@ -1,0 +1,29 @@
+.parentWrapper {
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 32px;
+  border-radius: 8px;
+}
+
+.heading {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  color: black;
+}
+
+.subHeading {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: gray;
+}

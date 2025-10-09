@@ -1,0 +1,85 @@
+.cardWrapper {
+  width: 100%;
+  padding: 20px 20px;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+  /* box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.25); */
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid white;
+}
+.cardWrapper:hover {
+  border: 1px solid #23a6f0;
+  cursor: pointer;
+}
+.lineBar {
+  margin-top: 30px;
+  border: 1px solid gray;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.avatar {
+  position: absolute;
+  top: 20px;
+}
+
+.subTitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 20px;
+  color: #6f7a7d;
+}
+
+.title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  margin-top: 12px;
+}
+
+.textCss {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6f7a7d;
+  letter-spacing: 0.2px;
+  margin-top: 12px;
+}
+
+.dateText {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+  color: #6f7a7d;
+  margin-top: 38px;
+}
+
+@media (max-width: 1200px) {
+  .dateText {
+    margin-top: 32px;
+  }
+  .title {
+    margin-top: 8px;
+  }
+  .subTitle {
+    margin-top: 38px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dateText {
+    margin-top: 38px;
+  }
+}

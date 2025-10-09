@@ -1,0 +1,35 @@
+.dataHeader {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr 1fr 1fr 64px;
+  text-align: center;
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 20px;
+}
+
+.dataCss {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr 1fr 1fr 64px;
+  padding: 10px 0px;
+  text-align: center;
+  align-items: center;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.dataCss:last-child {
+  border-bottom: none;
+}
+
+.inviteUserBtn {
+  padding-left: 54px;
+  padding-top: 10px;
+}
+
+.dataNewCss {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr 1fr 1fr 64px;
+  padding: 10px 0px;
+  text-align: center;
+  align-items: center;
+  border-bottom: 1px solid #c4c4c4;
+  border-left: 3px solid dodgerblue;
+}

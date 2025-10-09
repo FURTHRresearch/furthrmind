@@ -1,0 +1,23 @@
+.parentWrapper {
+  background: #e5e5e59e;
+  width: 100%;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.labelCss {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .labelCss {
+    font-size: 12px;
+  }
+}

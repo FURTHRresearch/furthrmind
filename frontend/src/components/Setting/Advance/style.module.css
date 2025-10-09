@@ -1,0 +1,28 @@
+.cardHeaderWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardContent {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 145% */
+  margin-top: 5px;
+  letter-spacing: 0.1px;
+  max-width: 70%;
+  margin-bottom: 15px;
+  color: #6f7a7d;
+}
+
+.cardOuterWrap {
+  border-bottom: 1px solid #c4c4c4;
+  margin-bottom: 15px;
+}
+
+.cardOuterWrap:last-child {
+  border-bottom: none;
+}

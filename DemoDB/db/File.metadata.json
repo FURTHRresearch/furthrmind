@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"uuid":{"$numberInt":"1"}},"name":"uuid_1","background":false},{"v":{"$numberInt":"2"},"key":{"S3Key":{"$numberInt":"1"}},"name":"S3Key_1","background":false}],"uuid":"4404377c3e3742f99b5e9e1da38ef208","collectionName":"File"}

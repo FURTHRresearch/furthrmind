@@ -1,0 +1,49 @@
+# syntax=docker/dockerfile:1
+
+#FROM node:18.13.0-slim as furthrmind-frontend-buildimage
+FROM node:24-slim AS furthrmind-frontend-buildimage
+WORKDIR /build
+COPY frontend .
+# COPY frontend/package.json frontend/package-lock.json ./
+RUN npm install
+RUN npx update-browserslist-db@latest
+RUN npx vite build --base=/web/static/react/
+
+FROM python:3.12-slim-bookworm AS furthrmind-server
+
+RUN apt-get -y update
+RUN apt-get -y install ca-certificates
+RUN apt-get -y install wget
+
+WORKDIR /app
+
+RUN wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-debian12-x86_64-100.12.0.deb -O mongo-tools.deb
+RUN apt -y install ./mongo-tools.deb
+
+COPY Pipfile ./
+RUN pip install pipenv
+RUN pipenv install
+RUN pipenv update
+
+COPY start.sh .
+COPY migrate.sh .
+COPY start_without_migrate.sh .
+COPY start_worker.sh .
+COPY start_worker.py .
+COPY start_trigger_server.sh .
+COPY start_trigger_server.py .
+COPY tenjin tenjin
+COPY config.py app.py start_worker.py ./
+
+COPY docker/correct_line_ending_sh.py .
+
+RUN python correct_line_ending_sh.py
+
+COPY DemoDB ./DemoDB
+
+# COPY --from=furthrmind-buildimage /build/PYC .
+COPY --from=furthrmind-frontend-buildimage /build/dist tenjin/web/static/react
+
+COPY tenjin/web/templates tenjin/web/templates/.
+
+CMD ["sh","start.sh"]

@@ -1,0 +1,36 @@
+.pageStyle {
+  background-color: #f5f5f7;
+  min-height: 100vh;
+}
+
+.pageInnerWrapper {
+  margin: 0px 86px;
+}
+
+.projectCardOuterWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 26px;
+}
+
+@media (max-width: 1200px) {
+  .pageInnerWrapper {
+    margin: 0px 46px;
+  }
+}
+
+@media (max-width: 992px) {
+  .projectCardOuterWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .pageInnerWrapper {
+    margin: 0px 26px;
+  }
+}
+
+@media (max-width: 576px) {
+  .projectCardOuterWrapper {
+    grid-template-columns: 1fr;
+  }
+}

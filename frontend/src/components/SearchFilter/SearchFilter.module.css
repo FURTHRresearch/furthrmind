@@ -1,0 +1,119 @@
+.parentWrapper {
+  position: fixed;
+  right: 25px;
+  top: 80px;
+  width: 700px;
+
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  padding: 20px 32px;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.groupByCss {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainTitleCss {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.subTitleCss {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.142857px;
+  color: #000000;
+  margin-right: 10px;
+}
+
+.subHeaderWrapper {
+  margin-top: 5px;
+}
+
+.descTextCss {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #c4c4c4;
+}
+
+.buttonWrapper {
+  display: flex;
+  column-gap: 14px;
+  margin-top: 10px;
+}
+
+.fieldLabelCss {
+  /* font-family: "Montserrat"; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+
+  letter-spacing: 0.294355px;
+  color: #252b42;
+}
+
+.fieldWrap {
+  margin-bottom: 12px;
+}
+
+.fieldWrap:last-child {
+  margin-bottom: 0px;
+}
+
+.cardParentWrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+@media (max-width: 992px) {
+  .parentWrapper {
+    width: 560px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parentWrapper {
+    width: 460px;
+  }
+}
+
+@media (max-width: 576px) {
+  .parentWrapper {
+    width: 400px;
+  }
+
+  .mainTitleCss {
+    font-size: 18px;
+    line-height: 29px;
+  }
+
+  .subTitleCss {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .descTextCss {
+    font-size: 12px;
+  }
+}

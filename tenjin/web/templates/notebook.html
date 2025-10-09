@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook</title>
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <style>
+        .toastui-editor-defaultUI {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10050;
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="editor"></div>
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <script>
+        const Editor = toastui.Editor;
+        var saveTimeout;
+        var changesSaved = true;
+        const editor = new Editor({
+            el: document.querySelector('#editor'),
+            initialEditType: 'wysiwyg',
+            hooks: {
+                addImageBlobHook: function (blob, callback) {
+                    fetch('/nbfiles/upload', {
+                        method: 'POST',
+                        body: blob
+                    }).then(function (response) {
+                        response.text().then(function (text) {
+                            callback('/nbfiles/' + text, '');
+                        });
+                    });
+                    return false;
+                }
+            },
+            events: {
+                change: function () {
+                    changesSaved = false;
+                    clearTimeout(saveTimeout);
+                    saveTimeout = setTimeout(function () {
+                        fetch(window.location.href, {
+                            method: 'POST',
+                            body: editor.getMarkdown()
+                        });
+
+                        changesSaved = true;
+                    }, 500);
+                }
+            },
+            initialValue: decodeURIComponent(`{{ content }}`)
+        });
+
+        window.onbeforeunload = function (event) {
+            if (!changesSaved) event.returnValue = "Saving... Please wait";
+        };
+    </script>
+</body>
+
+</html>

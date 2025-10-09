@@ -1,0 +1,16 @@
+<!-- This code is licensed under the AGPLv3 License. A copy of the license can be found here: https://www.gnu.org/licenses/agpl-3.0.en.html -->
+
+<div id="placeholder"></div>
+<script type="text/javascript" src="{{ server_url }}/web-apps/apps/api/documents/api.js"></script>
+<script>
+    configjson = decodeURIComponent(`{{configjson|safe}}`);
+    config = JSON.parse(configjson);
+    console.log(configjson)
+    var docEditor = new DocsAPI.DocEditor("placeholder", config);
+</script>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+</style>

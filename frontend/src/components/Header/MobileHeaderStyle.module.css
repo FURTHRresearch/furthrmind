@@ -1,0 +1,65 @@
+.sideBarWrapper {
+  width: 250px;
+  padding: 20px 0px;
+  min-height: 100vh;
+  position: relative;
+}
+.logoTitle {
+  font-family: "Roboto";
+  font-weight: 600;
+  cursor: pointer;
+}
+.closeArea {
+  display: flex;
+  padding: 0px 10px 20px 10px;
+  justify-content: space-between;
+}
+
+.closeBtn {
+  cursor: pointer;
+}
+
+.menuItem {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: #737373;
+  padding: 20px;
+}
+.menuItemActive {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: white;
+  background-color: #0164f8;
+
+  padding: 20px;
+}
+.linkArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.userArea {
+  position: absolute;
+  background-color: #e7e7e7;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  bottom: 0px;
+  align-items: center;
+}
+
+.userMail {
+  font-size: 12px;
+}

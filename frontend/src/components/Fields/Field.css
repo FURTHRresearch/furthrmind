@@ -1,0 +1,11 @@
+.field .field-options {
+    visibility: hidden;
+}
+
+.field:hover .field-options {
+    visibility: visible;
+}
+
+.field {
+    width: 100%;
+}
