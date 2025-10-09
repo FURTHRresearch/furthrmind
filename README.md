@@ -1,6 +1,5 @@
-# Tenjin
-
-Tenjin powers the FURTHRmind web interface and REST API. 
+# FURTHRmind 
+FURTHRmind is a software tool for research and measurement data management (https://furthrmind.com)[https://furthrmind.com]. It is based on a flask server, in production served by gunicorn WSGI. As backend it uses a mongodb and is powered by the mongoengine framework.  
 
 
 ## Installation
