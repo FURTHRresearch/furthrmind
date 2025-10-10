@@ -10,7 +10,7 @@ Install python enviroment with `pipenv install`
 ## Run for development
 
 ```
-FLASK_ENV=development pipenv run flask run
+python3 start.py
 npm start --prefix frontend
 ```
 
