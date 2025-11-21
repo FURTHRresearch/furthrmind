@@ -9,7 +9,7 @@ CALLBACK_URL = os.getenv("CALLBACK_URL", None)
 
 GLITCHTIP_DSN = os.getenv("GLITCHTIP_DSN", None)
 
-SERVER_VERSION = "1.31.0"
+SERVER_VERSION = "1.31.1"
 
 WEBDATACALC_API = os.getenv("WEBDATACALC_API", "https://webdatacalc.furthrmind.app")
 WEBDATACALC_API_KEY = os.getenv("WEBDATACALC_API_KEY", "<your_webdatacalc_key_here>")

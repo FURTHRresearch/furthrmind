@@ -8,7 +8,7 @@ class InnerSchemaWithShortID(Schema):
 
 class InnerSchemaWithoutShortID(Schema):
     _id = fields.String(data_key="id", required=True, metadata={"description":"The identifier"})
-    Name = fields.String(data_key="name", required=True, metadata={"description":"The name"})
+    Name = fields.String(data_key="name", metadata={"description":"The name"})
 
 
 class InnerUnitSchema(Schema):

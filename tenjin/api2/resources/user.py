@@ -200,6 +200,9 @@ def post():
             for key in data:
                 if key in direct_update_keys:
                     Update.update("User", key, data["key"], user_id)
+                elif key == "send_email":
+                    # ignore, only for user creation
+                    pass
                 elif key == "usergroups":
                     # To ensure, that all usergroups exist
                     usergroup_id_list = [f["_id"] for f in data["usergroups"]]
